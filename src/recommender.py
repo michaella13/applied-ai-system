@@ -39,12 +39,40 @@ class Recommender:
         self.songs = songs
 
     def recommend(self, user: UserProfile, k: int = 5) -> List[Song]:
-        # TODO: Implement recommendation logic
-        return self.songs[:k]
+        prefs = {
+            "genre":        user.favorite_genre,
+            "mood":         user.favorite_mood,
+            "energy":       user.target_energy,
+            "valence":      0.7,
+            "tempo_bpm":    120.0,
+            "danceability": 0.7,
+            "acousticness": 0.8 if user.likes_acoustic else 0.2,
+        }
+        song_dicts = [s.__dict__ for s in self.songs]
+        scored = sorted(
+            [(s, *score_song(prefs, d)) for s, d in zip(self.songs, song_dicts)],
+            key=lambda x: x[1],
+            reverse=True,
+        )
+        return [s for s, _, _ in scored[:k]]
 
     def explain_recommendation(self, user: UserProfile, song: Song) -> str:
-        # TODO: Implement explanation logic
-        return "Explanation placeholder"
+        from src.ai_client import generate_explanation
+        query = (
+            f"A {user.favorite_mood} {user.favorite_genre} fan "
+            f"with {'high' if user.target_energy > 0.6 else 'low'} energy preference"
+        )
+        prefs = {
+            "genre":        user.favorite_genre,
+            "mood":         user.favorite_mood,
+            "energy":       user.target_energy,
+            "valence":      0.7,
+            "tempo_bpm":    120.0,
+            "danceability": 0.7,
+            "acousticness": 0.8 if user.likes_acoustic else 0.2,
+        }
+        score, reasons = score_song(prefs, song.__dict__)
+        return generate_explanation(query, [(song.__dict__, score, reasons)])
 
 def load_songs(csv_path: str) -> List[Dict]:
     """

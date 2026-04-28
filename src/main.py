@@ -1,12 +1,12 @@
 """
-Command line runner for the Music Recommender Simulation.
+Command line runner for the Music Recommender Simulation — RAG Edition.
 
-This file helps you quickly run and test your recommender.
-
-You will implement the functions in recommender.py:
-- load_songs
-- score_song
-- recommend_songs
+Flow:
+  1. User types a natural language query
+  2. Claude (call #1) parses it into structured preferences
+  3. recommend_songs() retrieves and scores the catalog
+  4. Claude (call #2) generates a natural language explanation from the results
+  5. Logger records every stage to logs/recommender.log
 """
 
 import sys
@@ -14,6 +14,8 @@ import os
 sys.path.insert(0, os.path.dirname(__file__))
 
 from recommender import load_songs, recommend_songs
+from ai_client import parse_query, generate_explanation
+from logger import log_query, log_parsed_prefs, log_confidence, log_retrieved_songs, log_generated_response
 
 WIDTH = 54
 
@@ -22,7 +24,6 @@ def print_recommendation(rank: int, song: dict, score: float, reasons: list) -> 
     bar = "─" * WIDTH
     title = song["title"]
     score_str = f"Score: {score:.2f}"
-    # Pad title and score so they fill the line
     gap = WIDTH - len(f"  #{rank}  {title}  {score_str}")
     header = f"  #{rank}  {title}{' ' * max(1, gap)}{score_str}"
     print(header)
@@ -35,22 +36,49 @@ def print_recommendation(rank: int, song: dict, score: float, reasons: list) -> 
 def main() -> None:
     songs = load_songs("data/songs.csv")
 
-    user_prefs = {
-        "genre": "pop",
-        "mood": "happy",
-        "energy": 0.8,
-        "valence": 0.8,
-        "tempo_bpm": 120,
-        "danceability": 0.8,
-        "acousticness": 0.2,
-    }
+    print("\n  Music Recommender — RAG Edition")
+    print(f"  {'═' * WIDTH}")
+    query = input("\n  What do you want to hear? ").strip()
+    if not query:
+        print("  No input provided. Exiting.")
+        return
+
+    log_query(query)
+
+    print("\n  Interpreting your request...")
+    try:
+        user_prefs, confidence = parse_query(query)
+    except (ValueError, Exception) as e:
+        print(f"\n  Could not parse your request: {e}")
+        return
+
+    log_parsed_prefs(user_prefs)
+    log_confidence(confidence)
+
+    if confidence < 0.6:
+        print(f"\n  Warning: low confidence ({confidence:.0%}) — your request was unclear.")
+        print("  Results may not match what you had in mind.\n")
 
     recommendations = recommend_songs(user_prefs, songs, k=5)
+    log_retrieved_songs(recommendations)
 
     print(f"\n  Top {len(recommendations)} Recommendations")
     print(f"  {'═' * WIDTH}\n")
     for rank, (song, score, reasons) in enumerate(recommendations, start=1):
         print_recommendation(rank, song, score, reasons)
+
+    print(f"  {'─' * WIDTH}")
+    print("  Why these songs?\n")
+    try:
+        explanation = generate_explanation(query, recommendations)
+    except Exception as e:
+        explanation = f"(Could not generate explanation: {e})"
+
+    log_generated_response(explanation)
+
+    for line in explanation.splitlines():
+        print(f"  {line}")
+    print()
 
 
 if __name__ == "__main__":
