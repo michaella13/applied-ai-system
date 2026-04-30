@@ -7,3 +7,76 @@
 2026-04-28 12:06:01,434 [INFO] QUERY: something romantic
 2026-04-28 12:10:59,166 [INFO] QUERY: something romantic
 2026-04-28 12:11:23,919 [INFO] QUERY: something romantic
+2026-04-28 13:31:04,468 [INFO] QUERY: I need something high energy for my morning run
+2026-04-29 21:00:13,927 [INFO] QUERY: something energetic
+2026-04-29 21:29:08,061 [INFO] QUERY: something nice
+2026-04-29 21:30:24,033 [INFO] QUERY: something nice
+2026-04-29 21:35:28,074 [INFO] QUERY: something nice
+2026-04-29 21:42:46,733 [INFO] QUERY: I want to hear something to lift my mood
+2026-04-29 21:44:40,917 [INFO] QUERY: I want to hear something energetic
+2026-04-29 21:45:30,415 [INFO] QUERY: something nice
+2026-04-29 21:45:36,874 [INFO] PARSED PREFS: {'genre': 'pop', 'mood': 'relaxed', 'energy': 0.4, 'valence': 0.85, 'tempo_bpm': 95.0, 'danceability': 0.4, 'acousticness': 0.55}
+2026-04-29 21:45:36,874 [WARNING] PARSE CONFIDENCE: 0.50 — LOW CONFIDENCE, results may be inaccurate
+2026-04-29 21:45:36,875 [INFO] RETRIEVED 5 songs:
+2026-04-29 21:45:36,875 [INFO]   11.7950  Coffee Shop Stories — Slow Stereo
+2026-04-29 21:45:36,875 [INFO]   9.1850  Island Sunrise — Remy Tide
+2026-04-29 21:45:36,875 [INFO]   8.9750  Midnight Coding — LoRoom
+2026-04-29 21:45:36,875 [INFO]   8.9000  Library Rain — Paper Lanterns
+2026-04-29 21:45:36,875 [INFO]   8.8700  Spacewalk Thoughts — Orbit Bloom
+2026-04-29 21:45:42,429 [INFO] GENERATED RESPONSE: You asked for "something nice," and these songs are perfect for that!
+
+1.  **"Coffee Shop Stories" by Slow Stereo:** This jazz track shines with its wonderfully **relaxed mood** and smooth **energy**, creating a truly pleasant atmosphere.
+2.  **"Island Sunrise" by Remy Tide:** Its **laid-back reggae mood** and easygoing **tempo** offer a delightful, easygoing listening experience that feels genuinely nice.
+3.  **"Midnight Coding" by LoRoom:** This lofi tune brings a fantastic **chill mood** and steady **energy**, making it a very nice and mellow choice for you.
+4.  **"Library Rain" by Paper Lanterns:** Another fantastic lofi pick, its **chill mood** and gentle **energy** provide a wonderfully nice and calm background.
+5.  **"Spacewalk Thoughts" by Orbit Bloom:** With its ambient **genre** and **chill mood**, this song is ideal for a nice, calm, and unobtrusive vibe.
+
+Enjoy your nice listening!
+2026-04-29 21:46:13,915 [INFO] QUERY: something romantic
+2026-04-29 21:46:18,395 [INFO] PARSED PREFS: {'genre': 'r&b', 'mood': 'sensual', 'energy': 0.45, 'valence': 0.8, 'tempo_bpm': 100.0, 'danceability': 0.55, 'acousticness': 0.4}
+2026-04-29 21:46:18,395 [INFO] PARSE CONFIDENCE: 0.90
+2026-04-29 21:46:18,396 [INFO] RETRIEVED 5 songs:
+2026-04-29 21:46:18,396 [INFO]   14.6750  Velvet Hours — Sable Rose
+2026-04-29 21:46:18,396 [INFO]   7.1800  Porch & Fireflies — June Hollow
+2026-04-29 21:46:18,396 [INFO]   6.9850  Island Sunrise — Remy Tide
+2026-04-29 21:46:18,396 [INFO]   6.7750  Coffee Shop Stories — Slow Stereo
+2026-04-29 21:46:18,396 [INFO]   6.5950  Midnight Coding — LoRoom
+2026-04-29 21:46:24,482 [INFO] GENERATED RESPONSE: Here are some romantic tunes for you!
+
+1.  **"Velvet Hours" by Sable Rose:** This R&B track is a fantastic fit, with its `sensual mood` directly aligning with "romantic." It also has a perfect `energy` and `tempo` for an intimate vibe.
+2.  **"Porch & Fireflies" by June Hollow:** While `nostalgic`, this country song evokes tender feelings, making it romantic in a reflective way. Its `energy` and `tempo` create a warm, loving atmosphere.
+3.  **"Island Sunrise" by Remy Tide:** This reggae song's `laid-back mood` sets a relaxed, intimate scene perfect for romance. The `energy` and `tempo` contribute to its mellow charm.
+4.  **"Coffee Shop Stories" by Slow Stereo:** With its `relaxed jazz mood`, this song is ideal for a sophisticated romantic evening. Its gentle `energy` and `tempo` complete the picture.
+5.  **"Midnight Coding" by LoRoom:** This lofi track creates a cozy, understated romantic backdrop thanks to its `chill mood` and fitting `energy` and `tempo`.
+2026-04-29 22:00:04,195 [INFO] QUERY: I am in the mood for something uplifiting
+2026-04-29 22:00:08,287 [INFO] PARSED PREFS: {'genre': 'pop', 'mood': 'happy', 'energy': 0.85, 'valence': 0.95, 'tempo_bpm': 128.0, 'danceability': 0.75, 'acousticness': 0.3}
+2026-04-29 22:00:08,288 [INFO] PARSE CONFIDENCE: 0.85
+2026-04-29 22:00:08,288 [INFO] RETRIEVED 5 songs:
+2026-04-29 22:00:08,288 [INFO]   15.0400  Sunrise City — Neon Echo
+2026-04-29 22:00:08,288 [INFO]   11.8350  Rooftop Lights — Indigo Parade
+2026-04-29 22:00:08,288 [INFO]   9.6250  Gym Hero — Max Pulse
+2026-04-29 22:00:08,288 [INFO]   9.4000  Lagos Bounce — Temi Ade
+2026-04-29 22:00:08,288 [INFO]   9.1450  Drop Zone — Circuit Atlas
+2026-04-29 22:00:13,390 [INFO] GENERATED RESPONSE: Here are some great tracks to lift your spirits!
+
+1.  **"Sunrise City" by Neon Echo:** This pop track perfectly matches your request with its 'happy' mood. Its high energy and lively tempo make it incredibly uplifting.
+2.  **"Rooftop Lights" by Indigo Parade:** Another fantastic match, this indie pop song also features a 'happy' mood, combined with bright energy and an upbeat tempo for that uplifting vibe.
+3.  **"Gym Hero" by Max Pulse:** While its mood is 'intense,' this pop song's strong energy and driving tempo will give you an empowering, uplifting push.
+4.  **"Lagos Bounce" by Temi Ade:** This afrobeats tune is super 'energetic,' which closely aligns with uplifting. Its vibrant energy and quick tempo are sure to boost your mood.
+5.  **"Drop Zone" by Circuit Atlas:** With a 'euphoric' mood, this EDM track truly captures an uplifting feeling. Its high energy and exhilarating tempo promise an amazing lift.
+2026-04-29 22:01:32,962 [INFO] QUERY: I am in the mood for love and romance
+2026-04-29 22:01:38,579 [INFO] PARSED PREFS: {'genre': 'r&b', 'mood': 'sensual', 'energy': 0.45, 'valence': 0.9, 'tempo_bpm': 95.0, 'danceability': 0.5, 'acousticness': 0.4}
+2026-04-29 22:01:38,579 [INFO] PARSE CONFIDENCE: 0.90
+2026-04-29 22:01:38,579 [INFO] RETRIEVED 5 songs:
+2026-04-29 22:01:38,579 [INFO]   14.4500  Velvet Hours — Sable Rose
+2026-04-29 22:01:38,579 [INFO]   6.9050  Porch & Fireflies — June Hollow
+2026-04-29 22:01:38,579 [INFO]   6.7600  Island Sunrise — Remy Tide
+2026-04-29 22:01:38,579 [INFO]   6.5700  Coffee Shop Stories — Slow Stereo
+2026-04-29 22:01:38,579 [INFO]   6.3700  Midnight Coding — LoRoom
+2026-04-29 22:01:43,149 [INFO] GENERATED RESPONSE: Here are some beautiful songs to get you in the mood for love and romance!
+
+1.  **"Velvet Hours" by Sable Rose:** This R&B track is a perfect match with its sensual mood, capturing the essence of romance. Its energy and genre strongly align with your request.
+2.  **"Porch & Fireflies" by June Hollow:** While country and nostalgic, its warm energy and pleasant tempo evoke a sweet, reminiscent feeling that can definitely fit a romantic vibe.
+3.  **"Island Sunrise" by Remy Tide:** The laid-back mood and positive energy of this reggae tune create a relaxed, intimate atmosphere, ideal for a romantic setting.
+4.  **"Coffee Shop Stories" by Slow Stereo:** This jazz piece offers a relaxed mood and moderate energy, perfect for cozy, romantic moments.
+5.  **"Midnight Coding" by LoRoom:** With its chill mood and gentle energy, this lofi track provides a smooth, understated backdrop for quiet romance.

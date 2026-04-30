@@ -3,9 +3,9 @@ Command line runner for the Music Recommender Simulation — RAG Edition.
 
 Flow:
   1. User types a natural language query
-  2. Claude (call #1) parses it into structured preferences
+  2. Gemini (call #1) parses it into structured preferences
   3. recommend_songs() retrieves and scores the catalog
-  4. Claude (call #2) generates a natural language explanation from the results
+  4. Gemini (call #2) generates a natural language explanation from the results
   5. Logger records every stage to logs/recommender.log
 """
 

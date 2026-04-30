@@ -9,7 +9,7 @@ load_dotenv()
 
 REQUIRED_KEYS = {"genre", "mood", "energy", "valence", "tempo_bpm", "danceability", "acousticness"}
 NUMERIC_KEYS  = {"energy", "valence", "danceability", "acousticness"}
-MODEL = "gemini-2.0-flash"
+MODEL = "gemini-2.5-flash"
 _client_instance: genai.Client | None = None
 
 

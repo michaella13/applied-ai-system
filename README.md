@@ -1,5 +1,11 @@
 # Music Recommender Simulation — RAG Edition
 
+## Demo Video
+
+[Watch the Loom walkthrough](YOUR_LOOM_LINK_HERE)
+
+---
+
 ## Original Project (Module 3)
 
 The **Music Recommender Simulation** was built in Module 3 as a rule-based recommendation engine. It scored every song in a 20-song catalog against a hardcoded user preference profile across seven features — mood, genre, energy, valence, tempo, danceability, and acousticness — and returned the top-k results using a weighted formula. The system used mood-first weighting (up to 5 pts for an exact mood match) and a proximity formula for numeric features, with a maximum possible score of 15.5 points per song.
