@@ -24,7 +24,7 @@ When a user types their request, the system runs three steps automatically.
 
 **Step 1 — Understanding the request.** The system passes the user's words to a language model (Google Gemini). Gemini reads the sentence and translates it into a set of numbers and labels that describe musical taste: things like genre, mood, energy level (on a scale of 0 to 1), how danceable the song should be, how acoustic, and how fast the tempo should be. Gemini also rates how confident it is in that translation — if the request is too vague, it flags that as a warning.
 
-**Step 2 — Finding the best matches.** The system compares those translated preferences against every song in the 20-song catalog using a scoring formula. Each song earns points based on how closely it matches: an exact genre match gives 3 points, an exact mood match gives 5 points, and the numeric features (energy, tempo, danceability, etc.) each contribute a smaller amount based on how close they are to the user's preference. The five songs with the highest total scores are returned.
+**Step 2 — Finding the best matches.** The system compares those translated preferences against every song in the 20-song catalog using a scoring formula. Each song earns points based on how closely it matches: an exact genre match gives 3 points, an exact mood match gives 5 points (or 2.5 points if the song's mood falls in the same pre-defined cluster as the user's mood), and the numeric features contribute additional points weighted by importance — energy is worth up to 3 points, valence up to 2, and tempo, danceability, and acousticness up to 1, 1, and 0.5 respectively. The five songs with the highest total scores are returned.
 
 **Step 3 — Explaining the results.** The top five songs — along with their scores and the specific reasons each song ranked where it did — are handed back to Gemini. Gemini then writes a short, conversational explanation of why each song fits what the user asked for. Crucially, it can only reference songs and scores that actually came from the catalog. It cannot invent songs or make up reasons.
 
@@ -36,7 +36,7 @@ The key change from the original version of this project is the first and third 
 
 The catalog contains **20 songs**, each with the following attributes: title, artist, genre, mood, energy level, tempo in BPM, valence (how positive the feeling is), danceability, and acousticness.
 
-The genres represented include pop, lofi, rock, ambient, jazz, synthwave, indie pop, hip-hop, metal, reggae, country, r&b, EDM, blues, rap, and afrobeats — though not all genres have equal representation. Pop and lofi tend to appear more often than niche genres like blues or reggae.
+The genres represented include pop, lofi, rock, ambient, jazz, synthwave, indie pop, hip-hop, metal, reggae, country, r&b, EDM, blues, rap, afrobeats, and classical — though not all genres have equal representation. Lofi appears three times and pop twice, while niche genres like blues, reggae, and classical each appear only once.
 
 The moods in the catalog span 16 options: happy, chill, intense, focused, moody, relaxed, peaceful, laid-back, euphoric, energetic, aggressive, melancholic, confident, nostalgic, sensual, and gritty.
 

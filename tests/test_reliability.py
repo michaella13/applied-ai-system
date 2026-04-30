@@ -12,7 +12,7 @@ import pytest
 VALID_GENRES = {
     "pop", "lofi", "rock", "ambient", "jazz", "synthwave",
     "indie pop", "hip-hop", "metal", "reggae", "country",
-    "r&b", "edm", "blues", "rap", "afrobeats",
+    "r&b", "edm", "blues", "rap", "afrobeats", "classical",
 }
 VALID_MOODS = {
     "happy", "chill", "intense", "focused", "moody", "relaxed",
