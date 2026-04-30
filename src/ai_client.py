@@ -1,5 +1,6 @@
 import json
 import os
+import time
 from typing import Dict, List, Tuple
 
 from google import genai
@@ -11,6 +12,35 @@ REQUIRED_KEYS = {"genre", "mood", "energy", "valence", "tempo_bpm", "danceabilit
 NUMERIC_KEYS  = {"energy", "valence", "danceability", "acousticness"}
 MODEL = "gemini-2.5-flash"
 _client_instance: genai.Client | None = None
+
+
+RETRYABLE_CODES = {429, 503}
+MAX_RETRIES = 3
+
+
+def _generate_with_retry(model: str, contents: str) -> str:
+    """Call generate_content with exponential backoff on transient errors."""
+    delay = 5
+    for attempt in range(MAX_RETRIES):
+        try:
+            response = _client().models.generate_content(model=model, contents=contents)
+            return response.text.strip()
+        except Exception as e:
+            code = getattr(e, "code", None) or getattr(getattr(e, "status_code", None), "value", None)
+            # Also check string representation for 429/503 codes
+            err_str = str(e)
+            is_retryable = (
+                code in RETRYABLE_CODES
+                or "429" in err_str
+                or "503" in err_str
+                or "RESOURCE_EXHAUSTED" in err_str
+                or "UNAVAILABLE" in err_str
+            )
+            if is_retryable and attempt < MAX_RETRIES - 1:
+                time.sleep(delay)
+                delay *= 2
+            else:
+                raise
 
 
 def _client() -> genai.Client:
@@ -50,8 +80,7 @@ def parse_query(query: str) -> Tuple[Dict, float]:
         f"User request: {query}"
     )
 
-    response = _client().models.generate_content(model=MODEL, contents=prompt)
-    raw = response.text.strip().removeprefix("```json").removeprefix("```").removesuffix("```").strip()
+    raw = _generate_with_retry(MODEL, prompt).removeprefix("```json").removeprefix("```").removesuffix("```").strip()
 
     try:
         prefs = json.loads(raw)
@@ -92,5 +121,4 @@ def generate_explanation(query: str, songs: List[Tuple[Dict, float, List[str]]])
         "Explain why these songs fit what the user is looking for."
     )
 
-    response = _client().models.generate_content(model=MODEL, contents=prompt)
-    return response.text.strip()
+    return _generate_with_retry(MODEL, prompt)

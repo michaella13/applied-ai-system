@@ -80,3 +80,117 @@ Enjoy your nice listening!
 3.  **"Island Sunrise" by Remy Tide:** The laid-back mood and positive energy of this reggae tune create a relaxed, intimate atmosphere, ideal for a romantic setting.
 4.  **"Coffee Shop Stories" by Slow Stereo:** This jazz piece offers a relaxed mood and moderate energy, perfect for cozy, romantic moments.
 5.  **"Midnight Coding" by LoRoom:** With its chill mood and gentle energy, this lofi track provides a smooth, understated backdrop for quiet romance.
+2026-04-30 00:22:32,591 [INFO] QUERY: Looking for something to lift my mood
+2026-04-30 00:22:35,420 [INFO] PARSED PREFS: {'genre': 'pop', 'mood': 'happy', 'energy': 0.75, 'valence': 0.9, 'tempo_bpm': 125.0, 'danceability': 0.6, 'acousticness': 0.3}
+2026-04-30 00:22:35,420 [INFO] PARSE CONFIDENCE: 0.85
+2026-04-30 00:22:35,420 [INFO] RETRIEVED 5 songs:
+2026-04-30 00:22:35,421 [INFO]   14.8850  Sunrise City — Neon Echo
+2026-04-30 00:22:35,421 [INFO]   12.0400  Rooftop Lights — Indigo Parade
+2026-04-30 00:22:35,421 [INFO]   9.2600  Gym Hero — Max Pulse
+2026-04-30 00:22:35,421 [INFO]   9.0650  Lagos Bounce — Temi Ade
+2026-04-30 00:22:35,421 [INFO]   8.7800  Drop Zone — Circuit Atlas
+2026-04-30 00:22:39,728 [INFO] GENERATED RESPONSE: Here are some tracks to help lift your mood!
+
+1.  **Sunrise City by Neon Echo:** This pop track is a perfect match, scoring high for its happy mood, energetic feel, and upbeat tempo.
+2.  **Rooftop Lights by Indigo Parade:** With its happy mood, indie pop vibe, and energizing tempo, this song is sure to put a smile on your face.
+3.  **Gym Hero by Max Pulse:** An energetic pop song with an intense mood and driving tempo, it's designed to give you a powerful boost.
+4.  **Lagos Bounce by Temi Ade:** This afrobeats track offers an energetic mood and a lively tempo, ideal for getting you moving and feeling good.
+5.  **Drop Zone by Circuit Atlas:** A euphoric EDM track with high energy and a pulsating tempo, perfect for an uplifting experience.
+
+Hope these bring some sunshine to your day!
+2026-04-30 00:45:32,735 [INFO] QUERY: I want to hear something that makes my mood lifted
+2026-04-30 00:45:36,420 [INFO] PARSED PREFS: {'genre': 'pop', 'mood': 'happy', 'energy': 0.75, 'valence': 0.9, 'tempo_bpm': 128.0, 'danceability': 0.7, 'acousticness': 0.3}
+2026-04-30 00:45:36,420 [INFO] PARSE CONFIDENCE: 0.85
+2026-04-30 00:45:36,420 [INFO] RETRIEVED 5 songs:
+2026-04-30 00:45:36,420 [INFO]   14.9700  Sunrise City — Neon Echo
+2026-04-30 00:45:36,420 [INFO]   12.1250  Rooftop Lights — Indigo Parade
+2026-04-30 00:45:36,420 [INFO]   9.3750  Gym Hero — Max Pulse
+2026-04-30 00:45:36,420 [INFO]   9.1500  Lagos Bounce — Temi Ade
+2026-04-30 00:45:36,420 [INFO]   8.8950  Drop Zone — Circuit Atlas
+2026-04-30 00:45:41,538 [INFO] GENERATED RESPONSE: Here are some tracks to help lift your mood!
+
+1.  **"Sunrise City" by Neon Echo:** This pop track is a perfect mood match, scoring high for its happy and uplifting feel.
+2.  **"Rooftop Lights" by Indigo Parade:** Its happy mood and energetic indie pop sound are great for a pick-me-up, boosted by a good tempo.
+3.  **"Gym Hero" by Max Pulse:** While 'intense,' its energetic pop genre and high tempo are sure to give your mood a powerful boost.
+4.  **"Lagos Bounce" by Temi Ade:** This energetic afrobeats track has a vibrant mood, infectious energy, and tempo to get you feeling good.
+5.  **"Drop Zone" by Circuit Atlas:** With its euphoric mood, this EDM song brings an infectious energy and tempo that's perfect for a mood lift.
+2026-04-30 00:49:29,179 [INFO] QUERY: I am looking for something romantic
+2026-04-30 00:49:35,814 [INFO] PARSED PREFS: {'genre': 'r&b', 'mood': 'sensual', 'energy': 0.4, 'valence': 0.85, 'tempo_bpm': 100.0, 'danceability': 0.6, 'acousticness': 0.35}
+2026-04-30 00:49:35,815 [INFO] PARSE CONFIDENCE: 0.85
+2026-04-30 00:49:35,815 [INFO] RETRIEVED 5 songs:
+2026-04-30 00:49:35,815 [INFO]   14.5000  Velvet Hours — Sable Rose
+2026-04-30 00:49:35,815 [INFO]   7.0150  Porch & Fireflies — June Hollow
+2026-04-30 00:49:35,815 [INFO]   6.7600  Island Sunrise — Remy Tide
+2026-04-30 00:49:35,815 [INFO]   6.7500  Coffee Shop Stories — Slow Stereo
+2026-04-30 00:49:35,816 [INFO]   6.6650  Focus Flow — LoRoom
+2026-04-30 00:49:35,919 [INFO] GENERATED RESPONSE: (Could not generate explanation: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 24.132289642s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '24s'}]}})
+2026-04-30 00:55:51,343 [INFO] QUERY: something romantic
+2026-04-30 00:55:58,115 [INFO] PARSED PREFS: {'genre': 'r&b', 'mood': 'sensual', 'energy': 0.5, 'valence': 0.85, 'tempo_bpm': 100.0, 'danceability': 0.6, 'acousticness': 0.4}
+2026-04-30 00:55:58,115 [INFO] PARSE CONFIDENCE: 0.85
+2026-04-30 00:55:58,115 [INFO] RETRIEVED 5 songs:
+2026-04-30 00:55:58,116 [INFO]   14.7750  Velvet Hours — Sable Rose
+2026-04-30 00:55:58,116 [INFO]   7.0850  Island Sunrise — Remy Tide
+2026-04-30 00:55:58,116 [INFO]   6.9800  Porch & Fireflies — June Hollow
+2026-04-30 00:55:58,116 [INFO]   6.4750  Coffee Shop Stories — Slow Stereo
+2026-04-30 00:55:58,116 [INFO]   6.3950  Midnight Coding — LoRoom
+2026-04-30 00:55:58,222 [INFO] GENERATED RESPONSE: (Could not generate explanation: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 1.836232622s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '1s'}]}})
+2026-04-30 00:57:02,335 [INFO] QUERY: something romantic
+2026-04-30 01:06:38,179 [INFO] QUERY: something romantic
+2026-04-30 13:04:32,428 [INFO] QUERY: I need something high energy for my morning run
+2026-04-30 13:04:35,459 [INFO] PARSED PREFS: {'genre': 'pop', 'mood': 'energetic', 'energy': 0.9, 'valence': 0.8, 'tempo_bpm': 140.0, 'danceability': 0.7, 'acousticness': 0.2}
+2026-04-30 13:04:35,459 [INFO] PARSE CONFIDENCE: 0.90
+2026-04-30 13:04:35,459 [INFO] RETRIEVED 5 songs:
+2026-04-30 13:04:35,459 [INFO]   12.4700  Sunrise City — Neon Echo
+2026-04-30 13:04:35,459 [INFO]   11.9300  Lagos Bounce — Temi Ade
+2026-04-30 13:04:35,459 [INFO]   10.0550  Gym Hero — Max Pulse
+2026-04-30 13:04:35,459 [INFO]   9.3350  Drop Zone — Circuit Atlas
+2026-04-30 13:04:35,459 [INFO]   9.2850  Rooftop Lights — Indigo Parade
+2026-04-30 13:04:42,070 [INFO] GENERATED RESPONSE: Here are some great high-energy tracks perfect for your morning run!
+
+1.  **"Sunrise City" by Neon Echo**: This **pop** track brings a **happy mood** and high **energy**, perfect for getting you started with its upbeat **tempo**.
+2.  **"Lagos Bounce" by Temi Ade**: A fantastic **Afrobeats** choice, it's explicitly **energetic** and features a great **tempo** for keeping your stride.
+3.  **"Gym Hero" by Max Pulse**: Get ready to push limits with this high-**energy pop** song, sporting an **intense mood** and strong beat.
+4.  **"Drop Zone" by Circuit Atlas**: This **EDM** track delivers a **euphoric mood** and super high **energy**, ensuring you maintain a brisk pace.
+5.  **"Rooftop Lights" by Indigo Parade**: An **indie pop** gem with a **happy mood** and solid **energy** to power your morning miles.
+2026-04-30 13:06:22,702 [INFO] QUERY: I want something romantic
+2026-04-30 13:06:27,388 [INFO] PARSED PREFS: {'genre': 'r&b', 'mood': 'sensual', 'energy': 0.5, 'valence': 0.9, 'tempo_bpm': 100.0, 'danceability': 0.6, 'acousticness': 0.5}
+2026-04-30 13:06:27,388 [INFO] PARSE CONFIDENCE: 0.85
+2026-04-30 13:06:27,389 [INFO] RETRIEVED 5 songs:
+2026-04-30 13:06:27,389 [INFO]   14.6250  Velvet Hours — Sable Rose
+2026-04-30 13:06:27,389 [INFO]   7.0350  Island Sunrise — Remy Tide
+2026-04-30 13:06:27,389 [INFO]   6.9300  Porch & Fireflies — June Hollow
+2026-04-30 13:06:27,389 [INFO]   6.4250  Coffee Shop Stories — Slow Stereo
+2026-04-30 13:06:27,389 [INFO]   6.3450  Midnight Coding — LoRoom
+2026-04-30 13:06:28,175 [INFO] GENERATED RESPONSE: (Could not generate explanation: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}})
+2026-04-30 13:10:02,940 [INFO] QUERY: something romantic
+2026-04-30 13:10:09,785 [INFO] PARSED PREFS: {'genre': 'r&b', 'mood': 'sensual', 'energy': 0.4, 'valence': 0.85, 'tempo_bpm': 90.0, 'danceability': 0.45, 'acousticness': 0.5}
+2026-04-30 13:10:09,785 [INFO] PARSE CONFIDENCE: 0.88
+2026-04-30 13:10:09,786 [INFO] RETRIEVED 5 songs:
+2026-04-30 13:10:09,786 [INFO]   14.3250  Velvet Hours — Sable Rose
+2026-04-30 13:10:09,786 [INFO]   6.8900  Porch & Fireflies — June Hollow
+2026-04-30 13:10:09,786 [INFO]   6.8450  Coffee Shop Stories — Slow Stereo
+2026-04-30 13:10:09,786 [INFO]   6.7350  Island Sunrise — Remy Tide
+2026-04-30 13:10:09,786 [INFO]   6.6400  Focus Flow — LoRoom
+2026-04-30 13:10:17,523 [INFO] GENERATED RESPONSE: Hey there! Here are some songs that could be perfect for a romantic vibe:
+
+1.  **"Velvet Hours" by Sable Rose:** This R&B track perfectly captures a sensual mood, making it a fantastic, direct match for romance.
+2.  **"Porch & Fireflies" by June Hollow:** Its nostalgic country mood can evoke sweet, romantic memories, offering a warm and gentle energy.
+3.  **"Coffee Shop Stories" by Slow Stereo:** The relaxed jazz vibes create a cozy, intimate atmosphere ideal for a romantic moment, with a steady tempo.
+4.  **"Island Sunrise" by Remy Tide:** With a laid-back reggae mood, this track brings a relaxed, feel-good energy that can set a lovely romantic backdrop.
+5.  **"Focus Flow" by LoRoom:** This lofi track provides a smooth, calm energy, subtly setting a focused and intimate mood for your romantic setting.
+2026-04-30 13:13:11,520 [INFO] QUERY: something to do the dishes
+2026-04-30 13:13:15,979 [INFO] PARSED PREFS: {'genre': 'pop', 'mood': 'laid-back', 'energy': 0.55, 'valence': 0.75, 'tempo_bpm': 110.0, 'danceability': 0.5, 'acousticness': 0.4}
+2026-04-30 13:13:15,980 [INFO] PARSE CONFIDENCE: 0.65
+2026-04-30 13:13:15,980 [INFO] RETRIEVED 5 songs:
+2026-04-30 13:13:15,980 [INFO]   11.8450  Island Sunrise — Remy Tide
+2026-04-30 13:13:15,980 [INFO]   9.0700  Sunrise City — Neon Echo
+2026-04-30 13:13:15,980 [INFO]   8.9950  Coffee Shop Stories — Slow Stereo
+2026-04-30 13:13:15,980 [INFO]   8.7950  Midnight Coding — LoRoom
+2026-04-30 13:13:15,980 [INFO]   8.6550  Gym Hero — Max Pulse
+2026-04-30 13:13:24,057 [INFO] GENERATED RESPONSE: Here are some great tunes to help you tackle the dishes!
+
+1.  **Island Sunrise** by Remy Tide: This **reggae** track brings a wonderfully **laid-back mood** and good **energy**, perfect for making the chore feel relaxing.
+2.  **Sunrise City** by Neon Echo: A bright **pop** song with a **happy mood** and suitable **energy** and **tempo** to keep you smiling while you work.
+3.  **Coffee Shop Stories** by Slow Stereo: Its **relaxed jazz mood** combined with just-right **energy** and **tempo** creates a pleasant background for your task.
+4.  **Midnight Coding** by LoRoom: For a super mellow vibe, this **lofi** song's **chill mood** and fitting **energy** and **tempo** are ideal.
+5.  **Gym Hero** by Max Pulse: If you need a boost, this **pop** song offers **high energy** and an **upbeat tempo**, picked for its **intense mood** to help you power through!

@@ -2,7 +2,7 @@
 
 ## Demo Video
 
-[Watch the Loom walkthrough](YOUR_LOOM_LINK_HERE)
+[Watch the Loom walkthrough](https://www.loom.com/share/e8729087ac5e4bf8ba094bc4f680a909)
 
 ---
 
@@ -23,6 +23,7 @@ This matters because it makes the recommender accessible to anyone who can descr
 ---
 
 ## Architecture Overview
+system architecture diagram in assets
 
 The system has four main stages that run in sequence:
 
@@ -31,46 +32,7 @@ The system has four main stages that run in sequence:
 3. **Augment + Generate** — The retrieved songs, scores, and reasons are injected into a second Claude prompt as context. Claude (call #2) writes a human-readable explanation of the recommendations, grounded in the actual retrieval results.
 4. **Log** — Every stage (raw query, parsed prefs, retrieved candidates, final response) is written to a structured log so the system's behavior is traceable and auditable.
 
-```mermaid
-flowchart TD
-    USER([User])
-    INPUT["Natural language query\n'I want something upbeat for my morning run'"]
-    MAIN["src/main.py\nEntry point"]
 
-    subgraph AI ["ai_client.py"]
-        PARSE["PARSE — Claude call #1\nNL → user_prefs JSON\n{genre, mood, energy, valence, ...}"]
-        GENERATE["GENERATE — Claude call #2\nRetrieved songs injected as context\n→ natural language explanation"]
-    end
-
-    subgraph RETRIEVER ["src/recommender.py — Retriever"]
-        LOAD["load_songs(data/songs.csv)\n20 songs"]
-        SCORE["score_song(user_prefs, song)\n→ (score, reasons)"]
-        RECOMMEND["recommend_songs(user_prefs, songs, k=5)\n→ top-k (song, score, why)"]
-    end
-
-    LOG["logger.py\n• raw query\n• parsed prefs\n• retrieved songs + scores\n• final AI response"]
-
-    subgraph TESTING ["tests/test_recommender.py — Human Review"]
-        T1["score_song edge cases\n(mood clusters, extreme tempo)"]
-        T2["recommend_songs ranking correctness"]
-        T3["Recommender class methods"]
-        T4["Missing-key guardrails"]
-    end
-
-    OUTPUT([User sees ranked list\n+ AI explanation])
-
-    USER --> INPUT --> MAIN --> PARSE
-    PARSE --> LOAD --> SCORE --> RECOMMEND
-    RECOMMEND --> GENERATE
-    GENERATE --> OUTPUT
-
-    PARSE --> LOG
-    RECOMMEND --> LOG
-    GENERATE --> LOG
-
-    TESTING -.->|validates retrieval logic| RETRIEVER
-    TESTING -.->|human checks parsed prefs & explanations| AI
-```
 
 ---
 
@@ -275,7 +237,7 @@ Combining parsing and generation into a single prompt would make it harder to va
 - Missing keys: `score_song` raises `KeyError` on incomplete input — documented as a known limitation.
 
 **Summary in two lines:**
-12 out of 13 tests passed; the one failure was an external API rate limit, not a bug in the scoring logic.
+13 out of 13 tests passed; the one with potential failure is an external API rate limit, not a bug in the scoring logic.
 Confidence scores averaged ~0.85 across clear queries and dropped to ~0.7 on vague ones, triggering logged warnings that were visible in the output.
 
 ---
