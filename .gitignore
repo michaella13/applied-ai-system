@@ -17,4 +17,4 @@ venv/
 # Environment variables
 .env
 
-/CHANGES.md
+./CHANGES.md
